@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollman Alvarez | CEO CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #3366ff; --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --whatsapp: #25d366; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 15px; padding-bottom: 80px; line-height: 1.6; }
+        .container { max-width: 500px; margin: 0 auto; }
+        header { text-align: center; padding: 30px 0; }
+        .profile-pic { width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; box-shadow: 0 0 30px rgba(51,102,255,0.3); margin-bottom: 15px; }
+        h1 { font-size: 1.8rem; margin: 0; font-weight: 800; letter-spacing: -1px; text-transform: uppercase; }
+        .role { color: var(--accent); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 10px 0; }
+        
+        .pitch-box { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid var(--accent); padding: 20px; border-radius: 20px; margin-bottom: 25px; font-style: italic; font-size: 0.9rem; color: #cbd5e1; border-left: 5px solid var(--accent); }
+        
+        .section-card { background: var(--card); border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        h2 { font-size: 0.75rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; border-bottom: 1px solid rgba(51,102,255,0.2); padding-bottom: 8px; display: flex; justify-content: space-between; }
+        
+        .item { margin-bottom: 15px; }
+        .item b { color: #fff; display: block; font-size: 1rem; }
+        .item p { margin: 5px 0; font-size: 0.85rem; color: #94a3b8; }
+        
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tag { background: rgba(51,102,255,0.1); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; border: 1px solid rgba(51,102,255,0.3); }
+        
+        .cta-main { display: block; background: var(--accent); color: white; text-decoration: none; text-align: center; padding: 18px; border-radius: 15px; font-weight: 800; margin
