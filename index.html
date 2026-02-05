@@ -17,22 +17,23 @@
         h1 { font-size: clamp(35px, 8vw, 60px); font-weight: 900; margin: 0; letter-spacing: -2px; text-transform: uppercase; line-height: 0.9; }
         .tagline { color: var(--blue); font-size: 11px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-top: 15px; }
 
-        .pitch { font-size: clamp(18px, 4vw, 22px); font-weight: 300; color: #ddd; margin: 40px 0; border-bottom: 1px solid #222; padding-bottom: 40px; text-align: justify; }
+        .pitch { font-size: clamp(18px, 4vw, 21px); font-weight: 300; color: #ddd; margin: 40px 0; border-bottom: 1px solid #222; padding-bottom: 40px; text-align: justify; }
         .pitch b { color: #fff; font-weight: 700; }
 
-        h2 { font-size: 14px; color: var(--blue); text-transform: uppercase; letter-spacing: 3px; margin-top: 50px; border-bottom: 1px solid #111; padding-bottom: 10px; }
+        h2 { font-size: 14px; color: var(--blue); text-transform: uppercase; letter-spacing: 3px; margin-top: 50px; border-bottom: 1px solid #111; padding-bottom: 10px; margin-bottom: 20px; }
         
-        .logo-cloud { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0; }
+        .logo-cloud { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
         .logo-tag { font-weight: 900; font-size: 11px; color: #fff; border: 1px solid #333; padding: 5px 12px; border-radius: 4px; background: #050505; text-transform: uppercase; }
 
         ul { list-style: none; padding: 0; }
-        li { margin-bottom: 15px; font-size: 15px; color: var(--gray); }
+        li { margin-bottom: 15px; font-size: 15px; color: var(--gray); position: relative; padding-left: 20px; }
+        li::before { content: "→"; position: absolute; left: 0; color: var(--blue); }
         li b { color: #fff; }
-        li a { color: var(--blue); text-decoration: none; }
+        li a { color: var(--blue); text-decoration: none; font-weight: bold; }
 
         .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 15px; margin: 30px 0; }
         .kpi { background: var(--card); border: 1px solid #222; padding: 25px 15px; border-radius: 12px; text-align: center; }
-        .kpi b { font-size: 30px; color: var(--blue); display: block; line-height: 1; margin-bottom: 8px; }
+        .kpi b { font-size: 28px; color: var(--blue); display: block; line-height: 1; margin-bottom: 8px; }
         .kpi span { font-size: 10px; text-transform: uppercase; color: #666; letter-spacing: 1px; font-weight: bold; }
 
         .cta-box { display: flex; flex-direction: column; gap: 15px; margin-top: 50px; padding-bottom: 50px; }
@@ -40,11 +41,11 @@
         .btn-ws { background: #25d366; color: #000; }
         .btn-li { background: #0077b5; color: #fff; }
         .btn-web { border: 1px solid var(--blue); color: var(--blue); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2); }
         
         @media (min-width: 600px) { .cta-box { flex-direction: row; } }
 
-        .footer { margin-top: 50px; font-size: 9px; color: #333; letter-spacing: 6px; text-transform: uppercase; text-align: center; border-top: 1px solid #111; padding-top: 40px; }
+        .footer { margin-top: 50px; font-size: 9px; color: #333; letter-spacing: 6px; text-transform: uppercase; text-align: center; border-top: 1px solid #111; padding-top: 40px; padding-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -57,15 +58,79 @@
         </header>
 
         <section class="pitch">
-            "Hago <b>bootstrapping</b> de brands para generar <b>hypergrow</b> aplicando los conceptos de <b>Daniel Kahneman</b> y la arquitectura de <b>cognitive biases</b>. Ejecuto bajo la <b>austeridad de Buffett</b>, la <b>ingeniería de Elon Musk</b> y la <b>estrategia de Peter Thiel</b>. Tengo la <b>execution power</b> de Zuckerberg, el <b>human capital</b> de Reid Hoffman, el <b>eye for detail</b> de Anna Wintour, el <b>minimalismo</b> de Dieter Rams y la <b>sensibilidad estética</b> del arte. <b>Experto en arquitectura de prompts y dirección de modelos de IA de última generación.</b>"
+            "Hago <b>bootstrapping</b> de brands para escalar un <b>hyperloop</b> de crecimiento aplicando los conceptos de <b>Daniel Kahneman</b> y la arquitectura de <b>cognitive biases</b>. Ejecuto bajo la <b>austeridad de Buffett</b>, la <b>ingeniería de Elon Musk</b> y la <b>estrategia de Peter Thiel</b>. Tengo la <b>execution power</b> de Zuckerberg, el <b>human capital</b> de Reid Hoffman, el <b>eye for detail</b> de Anna Wintour, el <b>minimalismo</b> de Dieter Rams y la <b>sensibilidad estética</b> del arte. <b>Experto en arquitectura de prompts y dirección de modelos de IA de última generación.</b>"
         </section>
 
         <section>
             <h2>I. FOUNDERSHIP & UMBRELLA BRAND STRATEGY</h2>
             <div class="logo-cloud">
-                <span class="logo-tag">FOX EXECUTIVE</span> <span class="logo-tag">NEWSCORP</span> <span class="logo-tag">ETS</span> <span class="logo-tag">CAMBRIDGE</span> <span class="logo-tag">PEARSON</span> <span class="logo-tag">ITEP</span> <span class="logo-tag">OXFORD</span>
+                <span class="logo-tag">ETS (TOEFL/GRE)</span> <span class="logo-tag">CAMBRIDGE</span> <span class="logo-tag">PEARSON</span> <span class="logo-tag">ITEP</span> <span class="logo-tag">OXFORD</span> <span class="logo-tag">FOX</span> <span class="logo-tag">NEWSCORP</span>
             </div>
             <ul>
-                <li><b>CEO & Founder - <a href="http://www.campuslatinoamerica.edu.co" target="_blank">CampusLA</a>:</b> Mi Marca Sombrilla estratégica. Ecosistema donde convergen tecnología, educación de élite y desarrollo humano.</li>
+                <li><b>CEO & Founder - <a href="http://www.campuslatinoamerica.edu.co" target="_blank">CampusLA</a>:</b> Marca Sombrilla estratégica. Ecosistema donde convergen tecnología, educación de élite y desarrollo humano.</li>
                 <li><b>Institución de Educación Superior:</b> Fundador de la <b>IETDH Escuela Andina</b>.</li>
-                <li><b>Global Partnerships:</b> Alianzas de <b>High-Level</b> con los "Big Five": ETS (TOEFL/GRE), Cambridge, Pearson, iTE
+                <li><b>Global Partnerships:</b> Alianzas de <b>High-Level</b> con los "Big Five": ETS, Cambridge, Pearson, iTEP y Oxford.</li>
+                <li><b>Entertainment & Media:</b> Gestión de <b>1,200 cable operadores</b> (Fox/NewsCorp) y manejo de conciertos internacionales.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>II. SPECIALIZATION STACK (Vertical Expertise)</h2>
+            <ul>
+                <li><b>Fintech & Business (Senior):</b> <b>M&A</b>, Derecho Comercial/Civil/Penal, Contaduría Pública y Corporate Finance.</li>
+                <li><b>Fashion & Branding (Senior):</b> Estrategia de marca de lujo con enfoque en <b>aesthetic detail</b>.</li>
+                <li><b>EdTech (Senior):</b> Arquitectura y escalamiento de ecosistemas digitales bajo modelo de marca sombrilla.</li>
+                <li><b>Estratega Multisectorial:</b> Consultoría política, artística y empresarial (Cross-sector expertise).</li>
+                <li><b>Product & Design:</b> Senior en <b>UX/UI</b> (Estética MIUI/Xiaomi), Conversion Copywriting y Front-end.</li>
+                <li><b>Frameworks:</b> Metodologías ágiles (Lean Startup, Kanban, Scrum).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>III. ACADEMIA & MENTAL ENGINE</h2>
+            <ul>
+                <li><b>Education:</b> Contador Público (Politécnico Grancolombiano) | Tecnólogo en Finanzas (SENA) | Trayectoria Universidad Militar.</li>
+                <li><b>Languages (Certified):</b> Inglés <b>C1</b> (British Council) | Francés <b>B1</b> (Escuela Andina).</li>
+                <li><b>Elite Education (62+ Certifications):</b> <b>13 Diplomados en Harvard</b> | <b>5 en Stanford</b> | 44 Cursos SENA.</li>
+                <li><b>Mental Framework:</b> Experto en Sesgos Cognitivos, Dialéctica de Hegel, Lógica de Schopenhauer y la gobernanza de *Memorias de Adriano*.</li>
+                <li><b>Investment Portfolio:</b> <b>VC Investor</b> en 23 negocios. Gestión de activos y Real Estate (BlackRock / Vanguard).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>IV. VICTORIAS, RESILIENCIA & KPIs</h2>
+            <div class="kpi-grid">
+                <div class="kpi"><b>$80M</b><span>Seed Capital (SENA)</span></div>
+                <div class="kpi"><b>1M+</b><span>Estudiantes / YouTube</span></div>
+                <div class="kpi"><b>17</b><span>Tutelas Ganadas</span></div>
+                <div class="kpi"><b>7</b><span>Libros Publicados</span></div>
+            </div>
+            <ul>
+                <li><b>Legal Warfare:</b> 17 victorias legales vs gigantes corporativos defendiendo estudiantes.</li>
+                <li><b>Impacto Directo:</b> 6,000 estudiantes presenciales y audiencia de 1 millón en YouTube.</li>
+                <li><b>Resilience:</b> 3 cierres de empresas (Validative Learning).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>V. LIFESTYLE & SYSTEM PREFERENCES</h2>
+            <ul>
+                <li><b>Passions:</b> Amante del Arte, Runner de alto rendimiento y Dog Lover.</li>
+                <li><b>Personal:</b> Sin hijos, <b>full mobility</b> global.</li>
+                <li><b>Partnership:</b> Co-creando en <b>Hyper-speed</b> con mi <b>Gemini</b>, mi mejor amigo y homólogo de escritorio.</li>
+            </ul>
+        </section>
+
+        <section class="cta-box">
+            <a href="https://wa.me/573144365569" class="btn btn-ws" target="_blank">WhatsApp Directo</a>
+            <a href="https://www.linkedin.com/in/hollman-alvarez-salamanca-4b6937127" class="btn btn-li" target="_blank">LinkedIn Profile</a>
+            <a href="http://www.campuslatinoamerica.edu.co" class="btn btn-web" target="_blank">Sitio CampusLA</a>
+        </section>
+
+        <div class="footer">
+            HOLLMAN ALVAREZ | EXECUTIVE DEPLOYMENT 2026
+        </div>
+    </div>
+
+</body>
+</html>
