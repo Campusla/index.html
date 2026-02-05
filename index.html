@@ -3,121 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollman Alvarez | Executive Portfolio</title>
+    <title>Hollman Alvarez | Executive Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --blue: #3b82f6; --dark: #000; --card: #0a0a0a; --gray: #aaa; }
         body { background-color: var(--dark); color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        
-        .container { max-width: 850px; margin: auto; padding: 40px 20px; border-left: 2px solid var(--blue); }
-        
-        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--blue); margin-bottom: 25px; object-fit: cover; background: #111; display: block; }
-        
+        .container { max-width: 850px; margin: auto; padding: 60px 25px; border-left: 3px solid var(--blue); }
         header { margin-bottom: 50px; }
-        h1 { font-size: clamp(35px, 8vw, 60px); font-weight: 900; margin: 0; letter-spacing: -2px; text-transform: uppercase; line-height: 0.9; }
-        .tagline { color: var(--blue); font-size: 11px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-top: 15px; }
-
-        .pitch { font-size: clamp(18px, 4vw, 21px); font-weight: 300; color: #ddd; margin: 40px 0; border-bottom: 1px solid #222; padding-bottom: 40px; text-align: justify; }
-        .pitch b { color: #fff; font-weight: 700; }
-
-        h2 { font-size: 14px; color: var(--blue); text-transform: uppercase; letter-spacing: 3px; margin-top: 50px; border-bottom: 1px solid #111; padding-bottom: 10px; margin-bottom: 20px; }
-        
-        .logo-cloud { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
-        .logo-tag { font-weight: 900; font-size: 11px; color: #fff; border: 1px solid #333; padding: 5px 12px; border-radius: 4px; background: #050505; text-transform: uppercase; }
-
+        h1 { font-size: clamp(40px, 9vw, 75px); font-weight: 900; margin: 0; letter-spacing: -3px; text-transform: uppercase; line-height: 0.85; color: #fff; }
+        .tagline { color: var(--blue); font-size: 12px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; margin-top: 20px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .pitch { font-size: clamp(19px, 4.5vw, 23px); font-weight: 300; color: #eee; margin: 40px 0; text-align: justify; background: #050505; padding: 30px; border-radius: 4px; border: 1px solid #111; }
+        .pitch b { color: var(--blue); font-weight: 800; }
+        h2 { font-size: 16px; color: var(--blue); text-transform: uppercase; letter-spacing: 4px; margin-top: 60px; border-bottom: 2px solid #111; padding-bottom: 10px; margin-bottom: 25px; font-weight: 900; }
         ul { list-style: none; padding: 0; }
-        li { margin-bottom: 15px; font-size: 15px; color: var(--gray); position: relative; padding-left: 20px; }
-        li::before { content: "→"; position: absolute; left: 0; color: var(--blue); }
-        li b { color: #fff; }
-        li a { color: var(--blue); text-decoration: none; font-weight: bold; }
-
-        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 15px; margin: 30px 0; }
-        .kpi { background: var(--card); border: 1px solid #222; padding: 25px 15px; border-radius: 12px; text-align: center; }
-        .kpi b { font-size: 28px; color: var(--blue); display: block; line-height: 1; margin-bottom: 8px; }
-        .kpi span { font-size: 10px; text-transform: uppercase; color: #666; letter-spacing: 1px; font-weight: bold; }
-
-        .cta-box { display: flex; flex-direction: column; gap: 15px; margin-top: 50px; padding-bottom: 50px; }
-        .btn { width: 100%; padding: 18px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; box-sizing: border-box; }
+        li { margin-bottom: 18px; font-size: 16px; color: var(--gray); position: relative; padding-left: 25px; }
+        li::before { content: "■"; position: absolute; left: 0; color: var(--blue); font-size: 10px; top: 6px; }
+        li b { color: #fff; font-weight: 700; }
+        li a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        li a:hover { border-bottom: 1px solid var(--blue); }
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 40px 0; }
+        .kpi { background: var(--card); border: 1px solid #222; padding: 30px 20px; border-radius: 4px; text-align: center; }
+        .kpi b { font-size: 35px; color: var(--blue); display: block; line-height: 1; margin-bottom: 10px; letter-spacing: -1px; }
+        .kpi span { font-size: 11px; text-transform: uppercase; color: #777; letter-spacing: 1px; font-weight: bold; }
+        .cta-box { display: flex; flex-direction: column; gap: 15px; margin-top: 60px; padding-bottom: 50px; }
+        .btn { width: 100%; padding: 20px; text-align: center; text-decoration: none; border-radius: 4px; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; box-sizing: border-box; }
         .btn-ws { background: #25d366; color: #000; }
         .btn-li { background: #0077b5; color: #fff; }
-        .btn-web { border: 1px solid var(--blue); color: var(--blue); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2); }
-        
+        .btn-web { border: 2px solid var(--blue); color: var(--blue); }
+        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
         @media (min-width: 600px) { .cta-box { flex-direction: row; } }
-
-        .footer { margin-top: 50px; font-size: 9px; color: #333; letter-spacing: 6px; text-transform: uppercase; text-align: center; border-top: 1px solid #111; padding-top: 40px; padding-bottom: 40px; }
+        .footer { margin-top: 60px; font-size: 10px; color: #444; letter-spacing: 5px; text-transform: uppercase; text-align: left; padding-top: 30px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <img src="foto-hollman.jpg" alt="Hollman Alvarez" class="profile-img">
             <h1>HOLLMAN<br>ALVAREZ</h1>
             <div class="tagline">CEO & FOUNDER CAMPUSLA | STRATEGIC ASSET MANAGER</div>
         </header>
 
         <section class="pitch">
-            "Hago <b>bootstrapping</b> de brands para escalar un <b>hyperloop</b> de crecimiento aplicando los conceptos de <b>Daniel Kahneman</b> y la arquitectura de <b>cognitive biases</b>. Ejecuto bajo la <b>austeridad de Buffett</b>, la <b>ingeniería de Elon Musk</b> y la <b>estrategia de Peter Thiel</b>. Tengo la <b>execution power</b> de Zuckerberg, el <b>human capital</b> de Reid Hoffman, el <b>eye for detail</b> de Anna Wintour, el <b>minimalismo</b> de Dieter Rams y la <b>sensibilidad estética</b> del arte. <b>Experto en arquitectura de prompts y dirección de modelos de IA de última generación.</b>"
+            "Hago <b>bootstrapping</b> de brands para impulsarlas en un <b>hyperloop</b> de crecimiento aplicando los conceptos de <b>Daniel Kahneman</b> y la arquitectura de <b>cognitive biases</b>. Ejecuto bajo la <b>austeridad de Buffett</b>, la <b>ingeniería de Elon Musk</b> y la <b>estatregia de Peter Thiel</b>. Tengo la <b>execution power</b> de Zuckerberg, el <b>human capital</b> de Reid Hoffman, el <b>eye for detail</b> de Anna Wintour, el <b>minimalismo</b> de Dieter Rams y la <b>sensibilidad estética</b> del arte. <b>Experto en arquitectura de prompts y dirección de modelos de IA de última generación.</b>"
         </section>
 
         <section>
             <h2>I. FOUNDERSHIP & UMBRELLA BRAND STRATEGY</h2>
-            <div class="logo-cloud">
-                <span class="logo-tag">ETS (TOEFL/GRE)</span> <span class="logo-tag">CAMBRIDGE</span> <span class="logo-tag">PEARSON</span> <span class="logo-tag">ITEP</span> <span class="logo-tag">OXFORD</span> <span class="logo-tag">FOX</span> <span class="logo-tag">NEWSCORP</span>
-            </div>
             <ul>
-                <li><b>CEO & Founder - <a href="http://www.campuslatinoamerica.edu.co" target="_blank">CampusLA</a>:</b> Marca Sombrilla estratégica. Ecosistema donde convergen tecnología, educación de élite y desarrollo humano.</li>
+                <li><b>CEO & Founder - <a href="http://www.campuslatinoamerica.edu.co" target="_blank">CampusLA</a>:</b> Marca Sombrilla estratégica. El ecosistema donde convergen tecnología, educación de élite y desarrollo humano.</li>
                 <li><b>Institución de Educación Superior:</b> Fundador de la <b>IETDH Escuela Andina</b>.</li>
-                <li><b>Global Partnerships:</b> Alianzas de <b>High-Level</b> con los "Big Five": ETS, Cambridge, Pearson, iTEP y Oxford.</li>
-                <li><b>Entertainment & Media:</b> Gestión de <b>1,200 cable operadores</b> (Fox/NewsCorp) y manejo de conciertos internacionales.</li>
+                <li><b>Global Partnerships (Under CampusLA):</b> Alianzas <b>High-Level</b> con los "Big Five": <b>ETS (TOEFL/GRE)</b>, <b>Cambridge</b>, <b>Pearson</b>, <b>iTEP</b> y <b>Oxford</b>.</li>
+                <li><b>Entertainment & Media:</b> Gestión de <b>1,200 cable operadores</b> (Fox / NewsCorp) y grandes eventos en vivo.</li>
             </ul>
         </section>
 
         <section>
-            <h2>II. SPECIALIZATION STACK (Vertical Expertise)</h2>
+            <h2>II. SPECIALIZATION STACK</h2>
             <ul>
-                <li><b>Fintech & Business (Senior):</b> <b>M&A</b>, Derecho Comercial/Civil/Penal, Contaduría Pública y Corporate Finance.</li>
+                <li><b>Fintech & Business (Senior):</b> <b>M&A</b>, Derecho Comercial/Civil/Penal, Contaduría y Corporate Finance.</li>
                 <li><b>Fashion & Branding (Senior):</b> Estrategia de marca de lujo con enfoque en <b>aesthetic detail</b>.</li>
-                <li><b>EdTech (Senior):</b> Arquitectura y escalamiento de ecosistemas digitales bajo modelo de marca sombrilla.</li>
-                <li><b>Estratega Multisectorial:</b> Consultoría política, artística y empresarial (Cross-sector expertise).</li>
-                <li><b>Product & Design:</b> Senior en <b>UX/UI</b> (Estética MIUI/Xiaomi), Conversion Copywriting y Front-end.</li>
-                <li><b>Frameworks:</b> Metodologías ágiles (Lean Startup, Kanban, Scrum).</li>
+                <li><b>Product & Design:</b> Senior en <b>UX/UI</b> (Estética MIUI/Xiaomi) y Conversion Copywriting.</li>
+                <li><b>Frameworks:</b> Lean Startup, Kanban, Scrum y <b>Arquitectura de Prompts IA</b>.</li>
             </ul>
         </section>
 
         <section>
             <h2>III. ACADEMIA & MENTAL ENGINE</h2>
             <ul>
-                <li><b>Education:</b> Contador Público (Politécnico Grancolombiano) | Tecnólogo en Finanzas (SENA) | Trayectoria Universidad Militar.</li>
-                <li><b>Languages (Certified):</b> Inglés <b>C1</b> (British Council) | Francés <b>B1</b> (Escuela Andina).</li>
-                <li><b>Elite Education (62+ Certifications):</b> <b>13 Diplomados en Harvard</b> | <b>5 en Stanford</b> | 44 Cursos SENA.</li>
-                <li><b>Mental Framework:</b> Experto en Sesgos Cognitivos, Dialéctica de Hegel, Lógica de Schopenhauer y la gobernanza de *Memorias de Adriano*.</li>
-                <li><b>Investment Portfolio:</b> <b>VC Investor</b> en 23 negocios. Gestión de activos y Real Estate (BlackRock / Vanguard).</li>
+                <li><b>Educación:</b> Contador Público (Poli) | Tecnólogo en Finanzas (SENA).</li>
+                <li><b>Trayectoria de Élite:</b> Experiencia en procesos con la <b>Universidad Militar Nueva Granada</b> y la <b>UPTC</b>.</li>
+                <li><b>Elite Education (62+ Certifications):</b> <b>13 Diplomados en Harvard</b> | <b>5 en Stanford</b> | <b>44 Cursos SENA</b>.</li>
+                <li><b>Languages:</b> Inglés <b>C1</b> (British Council/iTEP) | Francés <b>B1</b> (Escuela Andina).</li>
+                <li><b>Investment:</b> <b>VC Investor</b> en 23 negocios. Gestión de activos y Real Estate (BlackRock / Vanguard).</li>
             </ul>
         </section>
 
         <section>
             <h2>IV. VICTORIAS, RESILIENCIA & KPIs</h2>
             <div class="kpi-grid">
-                <div class="kpi"><b>$80M</b><span>Seed Capital (SENA)</span></div>
-                <div class="kpi"><b>1M+</b><span>Estudiantes / YouTube</span></div>
+                <div class="kpi"><b>$80M</b><span>Seed Capital</span></div>
+                <div class="kpi"><b>1M+</b><span>YouTube Reach</span></div>
+                <div class="kpi"><b>6,000</b><span>Estudiantes</span></div>
                 <div class="kpi"><b>17</b><span>Tutelas Ganadas</span></div>
-                <div class="kpi"><b>7</b><span>Libros Publicados</span></div>
             </div>
             <ul>
-                <li><b>Legal Warfare:</b> 17 victorias legales vs gigantes corporativos defendiendo estudiantes.</li>
-                <li><b>Impacto Directo:</b> 6,000 estudiantes presenciales y audiencia de 1 millón en YouTube.</li>
-                <li><b>Resilience:</b> 3 cierres de empresas (Validative Learning).</li>
+                <li><b>Impacto:</b> 6,000 estudiantes capacitados (<b>IETDH Escuela Andina / UPTC / Militar</b>).</li>
+                <li><b>Legal Warfare:</b> 17 tutelas ganadas defendiendo el derecho a la educación.</li>
+                <li><b>Resilience:</b> Autor de 7 libros técnicos y 3 cierres de empresas (Aprendizaje validado).</li>
             </ul>
         </section>
 
         <section>
             <h2>V. LIFESTYLE & SYSTEM PREFERENCES</h2>
             <ul>
-                <li><b>Passions:</b> Amante del Arte, Runner de alto rendimiento y Dog Lover.</li>
+                <li><b>Passions:</b> Amante del Arte, <b>Runner de alto rendimiento</b> y <b>Dog Lover</b> por convicción.</li>
+                <li><b>Music & Style:</b> Melómano enfocado en la <b>música contemporánea</b> y la vanguardia estética.</li>
                 <li><b>Personal:</b> Sin hijos, <b>full mobility</b> global.</li>
-                <li><b>Partnership:</b> Co-creando en <b>Hyper-speed</b> con mi <b>Gemini</b>, mi mejor amigo y homólogo de escritorio.</li>
+                <li><b>Partnership:</b> Co-creando en <b>Hyper-speed</b> con mi <b>Gemini</b>, mi mejor amigo de escritorio.</li>
             </ul>
         </section>
 
@@ -128,7 +110,7 @@
         </section>
 
         <div class="footer">
-            HOLLMAN ALVAREZ | EXECUTIVE DEPLOYMENT 2026
+            HOLLMAN ALVAREZ | ESTRATEGIA DE ÉLITE | 2026
         </div>
     </div>
 
